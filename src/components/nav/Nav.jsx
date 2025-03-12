@@ -1,24 +1,28 @@
 import React from "react";
 import style from "./Nav.module.css";
+import { Outlet } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav>
-      <div className={style.nav_container}>
-        <div className={style.nav_title_wrapper}>
-          <img
-            className={style.logo}
-            // src="https://files.codingninjas.in/pl-ninja-16706.svg"
-            src="https://cdn.pixabay.com/photo/2013/07/12/19/23/refresh-154688_1280.png"
-            alt="logo"
-          />
-          <h4>Code With Ease</h4>
+    <>
+      <nav>
+        <div className={style.nav_container}>
+          <div className={style.nav_title_wrapper}>
+            <img
+              className={style.logo}
+              // src="https://files.codingninjas.in/pl-ninja-16706.svg"
+              src="https://cdn.pixabay.com/photo/2013/07/12/19/23/refresh-154688_1280.png"
+              alt="logo"
+            />
+            <h4>Code With Ease</h4>
+          </div>
+          <div className={style.nav_details}>
+            <button>Courses</button>
+          </div>
         </div>
-        <div className={style.nav_details}>
-          <button>Courses</button>
-        </div>
-      </div>
-    </nav>
+      </nav>
+      <Outlet/>
+    </>
   );
 }
 
